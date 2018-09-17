@@ -21,10 +21,6 @@
     "test": "echo \"No tests available\"; exit 0",
     "webpack-defaults": "webpack-defaults"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/drminnaar/react-redux-starter.git"
-  },
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
