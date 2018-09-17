@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Solive mini</title>
+</head>
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+    }
+    #endpoints {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #endpoints td,
+    #endpoints th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #endpoints tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #endpoints tr:hover {
+        background-color: #ddd;
+    }
+
+    #endpoints th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+    img {
+        margin-bottom: -13rem;
+    }
+
+</style>
+
+<body> 
+    <div class="content">
+    <img src="/public/solive_mini_logo.png" alt="solive_mini logo">
+
+    <table id="endpoints">
+        <tr>
+            <th>Endpoints</th>
+            <th>Actions</th>
+            <th>Returns</th>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td>Display the endpoints list</td>
+            <td>endpoints list</td>
+        </tr>
+        <tr>
+            <td>/teams</td>
+            <td>GET all team infos</td>
+            <td>
+                {
+                    teams: [
+                        {
+                            id: number,
+                            name: string,
+                            sport: string,
+                        }
+                    ]
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>/team/create</td>
+            <td>create team on db</td>
+            <td>
+                {
+                    teamCreated: true or flase
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>/team/update</td>
+            <td>upadte team infos</td>
+            <td>
+                {
+                    teamUpdate: true or false
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>/team/delete</td>
+            <td>delete team</td>
+            <td>
+                {
+                    teamDeleted: true or false
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>/players</td>
+            <td>GET all players infos</td>
+            <td>
+                {
+                    players: [
+                        {
+                            id: number,
+                            name: string,
+                            firstname: string,
+                            teamsId: number,
+                        }
+                    ]
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>/player/create</td>
+            <td>create player on db</td>
+            <td>
+                {
+                    playerCreated: true or false
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>/player/update</td>
+            <td>upadte player infos</td>
+            <td>
+                {
+                    playerUpadted: true or false
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>/player/delete</td>
+            <td>delete player</td>
+            <td>
+                {
+                    playerDleted: true or false
+                }
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>
